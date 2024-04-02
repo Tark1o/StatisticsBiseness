@@ -2,19 +2,20 @@ package ru.netology.stats;
 
 public class StatisticsBiseness {
 
-    public int calculateSumSales(int[]sales) {
+    public int calculateSumSales(int[] sales) {
         int sum = 0;
-        for (int sale:sales) {
+        for (int sale : sales) {
             sum += sale;
         }
         return sum;
-        }
+    }
 
     public int findAverage(int[] sales) {
         int sumSales = calculateSumSales(sales);
-        return calculateSumSales(sales)/sales.length;
+        return calculateSumSales(sales) / sales.length;
     }
-    public int findNumberMonthWithMaxSales (int[] sales) {
+
+    public int findNumberMonthWithMaxSales(int[] sales) {
         int monthMaxSales = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[monthMaxSales]) {
@@ -24,7 +25,8 @@ public class StatisticsBiseness {
         }
         return monthMaxSales + 1;
     }
-    public int findNumberMonthWithMinSales (int[] sales) {
+
+    public int findNumberMonthWithMinSales(int[] sales) {
         int monthMinSales = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[monthMinSales]) {
@@ -33,7 +35,8 @@ public class StatisticsBiseness {
         }
         return monthMinSales + 1;
     }
-    public int findMonthsWithSalesBelowAverage (int[] sales) {
+
+    public int findMonthsWithSalesBelowAverage(int[] sales) {
         int monthsBelowAverage = 0;
         int average = calculateSumSales(sales) / sales.length;
         for (int i : sales) {
@@ -43,7 +46,8 @@ public class StatisticsBiseness {
         }
         return monthsBelowAverage;
     }
-    public int findMonthsWithSalesHigherAverage (int[] sales) {
+
+    public int findMonthsWithSalesHigherAverage(int[] sales) {
         int monthsHigherAverage = 0;
         int average = calculateSumSales(sales) / sales.length;
         for (int i : sales) {

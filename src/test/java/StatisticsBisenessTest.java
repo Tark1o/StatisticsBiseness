@@ -14,6 +14,7 @@ public class StatisticsBisenessTest {
         int actualSum = service.calculateSumSales(sales);
         Assertions.assertEquals(expectedSum, actualSum);
     }
+
     @Test
     public void shouldFindAverage() {
         StatisticsBiseness service = new StatisticsBiseness();
@@ -24,16 +25,18 @@ public class StatisticsBisenessTest {
         int actualAverage = service.findAverage(sales);
         Assertions.assertEquals(expectedAverage, actualAverage);
     }
+
     @Test
     public void shoudFindNumberMonthWithMaxSales() {
         StatisticsBiseness service = new StatisticsBiseness();
         int[] sales = {
-            8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
+                8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
         };
         int expectedNumberMonthWithMaxSales = 8;
         int actualNumberMonthWithMaxSales = service.findNumberMonthWithMaxSales(sales);
         Assertions.assertEquals(expectedNumberMonthWithMaxSales, actualNumberMonthWithMaxSales);
     }
+
     @Test
     public void shouldFindNumberMonthWithMinSales() {
         StatisticsBiseness service = new StatisticsBiseness();
@@ -44,6 +47,7 @@ public class StatisticsBisenessTest {
         int actualNumberMonthWithMinSales = service.findNumberMonthWithMinSales(sales);
         Assertions.assertEquals(expectedNumberMonthWithMinSales, actualNumberMonthWithMinSales);
     }
+
     @Test
     public void shouldFindMonthsWithSalesBelowAverage() {
         StatisticsBiseness service = new StatisticsBiseness();
@@ -52,8 +56,9 @@ public class StatisticsBisenessTest {
         };
         int expectedMonthsMinAverage = 5;
         int actualMonthsMinAverage = service.findMonthsWithSalesBelowAverage(sales);
-        Assertions.assertEquals(expectedMonthsMinAverage,actualMonthsMinAverage);
+        Assertions.assertEquals(expectedMonthsMinAverage, actualMonthsMinAverage);
     }
+
     @Test
     public void shouldFindMonthsWithSalesHigherAverage() {
         StatisticsBiseness service = new StatisticsBiseness();
